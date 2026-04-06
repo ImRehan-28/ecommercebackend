@@ -1,16 +1,16 @@
 package com.rehan.ecommerce.controller;
 
-import com.rehan.ecommerce.entities.Order;
-import com.rehan.ecommerce.repository.OrderRepository;
-import com.rehan.ecommerce.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rehan.ecommerce.entities.Order;
+import com.rehan.ecommerce.service.OrderService;
+
 @RestController
-@RequestMapping("/orders")
+@RequestMapping("/api/orders")
 @CrossOrigin
 public class OrderController {
 

@@ -91,6 +91,8 @@ public class ProductController {
         product.setName(request.getName());
         product.setDescription(request.getDescription());
         product.setPrice(request.getPrice());
+        product.setCategory(request.getCategory());
+        product.setImage(request.getImage());
         return product;
     }
 
@@ -99,7 +101,9 @@ public class ProductController {
                 product.getId(),
                 product.getName(),
                 product.getDescription(),
-                product.getPrice()
+                product.getPrice(),
+                product.getCategory(),
+                product.getImage()
         );
     }
 }

@@ -24,6 +24,6 @@ public class AuthRequestDTO {
     public void setPassword(String password) {
         this.password = password;
     }
-    public String getRole(String role) {return role;}
+    public String getRole() { return role; }
 // getters & setters
 }

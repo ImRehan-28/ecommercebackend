@@ -31,7 +31,7 @@ public class OrderServiceImplementation implements OrderService{
         User user = userRepo.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        List<Cart> cartItems = cartRepo.findAll(); // ideally filter by user
+        List<Cart> cartItems = cartRepo.findByUser(user);
 
         if (cartItems.isEmpty()) {
             throw new RuntimeException("Cart is empty");
@@ -62,7 +62,7 @@ public class OrderServiceImplementation implements OrderService{
 
         Order saved = orderRepo.save(order);
 
-        cartRepo.deleteAll();
+        cartRepo.deleteAll(cartItems);
 
         return saved;
     }

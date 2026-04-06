@@ -58,6 +58,9 @@ public class CartServiceImplementation implements CartService{
 
     // Clear cart
     public void clearCart() {
-        cartRepo.deleteAll();
+        String email = SecurityContextHolder.getContext().getAuthentication().getName();
+        User user = userRepo.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        cartRepo.deleteAll(cartRepo.findByUser(user));
     }
 }
