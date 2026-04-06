@@ -1,0 +1,9 @@
+2026-04-06 15:22:59.649482+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), role varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), role varchar(255), primary key (id)) [42001-240]
+2026-04-06 15:22:59.822925+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists cart add constraint FKl70asp4l4w0jmbm1tqyofho4o foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists cart add constraint FKl70asp4l4w0jmbm1tqyofho4o foreign key (user_id) references user [42001-240]
+2026-04-06 15:22:59.838956+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user [42001-240]
